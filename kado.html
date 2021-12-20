@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kado</title>
+</head>
+
+<body style="background-color: #161616;">
+    <div id="kado" style="font-size: 90px; margin-top: auto; color: white; margin-top: 400px;">
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            var socket = io();
+            socket.on('currency-data', function(data) {
+                $("#kado").html(`<center>💲 ${data.BuyingPrice}</center>`)
+            });
+        });
+    </script>
+</body>
+
+</html>
