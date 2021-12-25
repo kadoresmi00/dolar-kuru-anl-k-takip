@@ -45,6 +45,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/kado.html');
 });
 
-http.listen(5000, () => {
+http.listen(3000, () => {
     console.log(`Kado`)
 })
